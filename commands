@@ -1,0 +1,15 @@
+sudo mkdir code tests personal misc
+cd /home/altschool/tests
+cd tests
+echo 'Hello A' > /home/altschool/misc/fileA
+touch /home/altschool/misc/fileB
+cd misc
+cp fileA fileC
+mv fileB fileD
+tar -c -v -f misc.tar .
+gzip misc.tar
+sudo useradd phlippd
+sudo passwd --expire phlippd
+sudo passwd -l phlippd
+sudo useradd -s /bin/false phlot
+sudo vi /etc/ssh/sshd_config
